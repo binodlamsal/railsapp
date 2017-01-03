@@ -1,0 +1,34 @@
+<div class="right_col" role="main" style="min-height: 3816px;">
+          <div class="">
+<br/>
+<br/>
+           <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>
+<p>
+  <strong>Title:</strong>
+  <%= @service.title %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @service.text %>
+</p>
+
+ 
+<p>
+  <strong>Fa-icon:</strong>
+  <%= @service.fa_icon %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @service.weight %>
+</p>
+ 
+<p>
+  <strong>Published:</strong>
+  <%= @service.published %>
+</p>
+
+</div>
+</div>

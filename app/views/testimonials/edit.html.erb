@@ -1,0 +1,93 @@
+<div class="right_col" role="main" style="min-height: 3816px;">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Edit Testimoninal</h3>
+
+                <br/>
+              </div>
+
+
+
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Edit Testimonial</h2>
+                   
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br>
+                    
+					<%= form_for :testimonial, url: testimonial_path(@testimonial), method: :patch, :html => { :id => "tesimonial_new", :class => "form-horizontal form-label-left" } do |f| %>
+  
+
+  <div class="form-group">
+      <%= f.label :title, 'Client Name <span>*</span>'.html_safe ,  :class=> 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= f.text_field :title, :id => "title", :required=> "required", :rows=> "25", :class=>"form-control col-md-7 col-xs-12 parsley-error"%>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :degination, 'Degination <span>*</span>'.html_safe ,  :class=> 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= f.text_field :degination, :id => "title", :required=> "required", :rows=> "25", :class=>"form-control col-md-7 col-xs-12 parsley-error"%>
+    </div>
+  </div>
+
+   <div class="form-group">
+      <%= f.label :picture, 'Image'.html_safe ,  :class=> 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= f.file_field :picture, :id => "title", :rows=> "25", :class=>"form-control col-md-7 col-xs-12 parsley-error"%><br/>
+      <img src="/uploads/<%= @testimonial.picture %>"  width="100" height="100">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+      <%= f.label :text, 'Testimonial <span>*</span>'.html_safe ,  :class=> 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= f.text_area :text, :id => "desc", :required=> "required", :class=>"form-control col-md-7 col-xs-12 parsley-error"%>
+    </div>
+  </div>
+
+
+  
+
+  <div class="form-group">
+      <%= f.label :publihsed, 'Published '.html_safe , :class => 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= f.check_box :enabled , :checked => 'checked' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :weight, 'Weight '.html_safe ,  :class=> 'control-label col-md-3 col-sm-3 col-xs-12' %>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+       <%= f.text_field :weight, :id => "weight", :required=> "required", :class=>"form-control col-md-7 col-xs-12 parsley-error"%>
+    </div>
+  </div>
+ 
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <%= f.submit:submit, :class => 'btn btn-success' %>
+                        <%= button_tag "Reset", :type => 'reset', :class => 'btn btn-primary' %>
+                        </div>
+                      </div>
+
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+           
+          </div>
+        </div>
